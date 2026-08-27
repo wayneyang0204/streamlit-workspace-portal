@@ -70,7 +70,6 @@ class PortalAppTests(unittest.TestCase):
             "apps": [
                 {
                     "name": "Unsafe",
-                    "description": "Unsafe destination",
                     "url": "https://example.com/",
                     "button": "Open",
                 }

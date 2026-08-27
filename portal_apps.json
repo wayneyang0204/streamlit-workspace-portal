@@ -5,7 +5,6 @@
       "id": "shieldcoating-documents",
       "name": "SDS／TDS／COC 文件系統",
       "eyebrow": "SHIELD COATING",
-      "description": "製作 SDS、TDS、COC、GHS 標籤與其他產品文件。",
       "url": "https://shieldcoating-sds-v24.streamlit.app/",
       "admin_url": "https://shieldcoating-sds-v24.streamlit.app/?admin=1",
       "button": "進入文件系統",
@@ -15,7 +14,6 @@
       "id": "insta-process",
       "name": "英仕達加工系統",
       "eyebrow": "INSTA PROCESS",
-      "description": "管理案件、委外加工、完工回報、出貨與正式報告。",
       "url": "https://insta-process-mobile.streamlit.app/",
       "button": "進入加工系統",
       "icon": "🏭"
@@ -24,7 +22,6 @@
       "id": "resin-formula-calculator",
       "name": "樹脂配方計算系統",
       "eyebrow": "RESIN FORMULA",
-      "description": "批次貼上 2–6 個配方，完成原料對應、理論計算與版本化紀錄。",
       "url": "https://wayne-resin-formula.streamlit.app/",
       "button": "進入配方系統",
       "icon": "🧪"

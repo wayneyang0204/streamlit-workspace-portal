@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 
 REGISTRY_PATH = Path(__file__).resolve().with_name("portal_apps.json")
-REQUIRED_FIELDS = ("name", "description", "url", "button")
+REQUIRED_FIELDS = ("name", "url", "button")
 
 
 def _is_allowed_streamlit_url(value: str) -> bool:

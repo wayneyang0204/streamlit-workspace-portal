@@ -10,7 +10,6 @@ import streamlit as st
 from portal_registry import load_portal_apps
 
 
-PORTAL_VERSION = "1.0"
 RESOURCE_DIR = Path(__file__).resolve().parent
 OFFICIAL_PROFILE_URL = "https://share.streamlit.io/user/wayneyang0204"
 
@@ -100,17 +99,8 @@ def _apply_portal_styles() -> None:
             text-align: center;
         }
 
-        .portal-subtitle {
-            max-width: 700px;
-            margin: 0.8rem auto 2.1rem;
-            color: var(--portal-muted);
-            font-size: 1.02rem;
-            line-height: 1.7;
-            text-align: center;
-        }
-
         [data-testid="stVerticalBlockBorderWrapper"] {
-            min-height: 310px;
+            min-height: 250px;
             border: 1px solid var(--portal-line);
             border-radius: 22px;
             background: rgba(255, 255, 255, 0.93);
@@ -153,14 +143,6 @@ def _apply_portal_styles() -> None:
             line-height: 1.28;
         }
 
-        .portal-card-copy {
-            min-height: 3.9rem;
-            margin: 0.75rem 0 1.1rem;
-            color: var(--portal-muted);
-            font-size: 0.94rem;
-            line-height: 1.65;
-        }
-
         [data-testid="stLinkButton"] a {
             border-radius: 12px;
             font-weight: 750;
@@ -174,21 +156,6 @@ def _apply_portal_styles() -> None:
         [data-testid="stLinkButton"] a[kind="primary"]:hover {
             border-color: var(--portal-teal-dark);
             background: var(--portal-teal-dark);
-        }
-
-        .portal-admin-note {
-            margin: 0.2rem 0 0;
-            color: #72868d;
-            font-size: 0.8rem;
-            text-align: center;
-        }
-
-        .portal-footer {
-            margin-top: 2.2rem;
-            color: #7c8d92;
-            font-size: 0.78rem;
-            letter-spacing: 0.03em;
-            text-align: center;
         }
 
         @media (max-width: 720px) {
@@ -209,8 +176,7 @@ def _apply_portal_styles() -> None:
                 min-height: auto;
             }
 
-            .portal-card-title,
-            .portal-card-copy {
+            .portal-card-title {
                 min-height: auto;
             }
         }
@@ -224,14 +190,12 @@ def _render_app_card(app: dict[str, str]) -> None:
     icon = escape(app.get("icon", "🚀"))
     eyebrow = escape(app.get("eyebrow", "STREAMLIT APP"))
     name = escape(app["name"])
-    description = escape(app["description"])
     with st.container(border=True):
         st.markdown(
             (
                 f'<div class="portal-card-icon" aria-hidden="true">{icon}</div>'
                 f'<div class="portal-card-eyebrow">{eyebrow}</div>'
                 f'<div class="portal-card-title">{name}</div>'
-                f'<div class="portal-card-copy">{description}</div>'
             ),
             unsafe_allow_html=True,
         )
@@ -248,10 +212,6 @@ def _render_app_card(app: dict[str, str]) -> None:
                 app["admin_url"],
                 icon=":material/admin_panel_settings:",
                 width="stretch",
-            )
-            st.markdown(
-                '<div class="portal-admin-note">管理員入口仍需原有密碼</div>',
-                unsafe_allow_html=True,
             )
 
 
@@ -291,10 +251,7 @@ def render_portal() -> None:
 
     st.markdown('<div class="portal-kicker">WORKSPACE PORTAL</div>', unsafe_allow_html=True)
     st.markdown('<h1 class="portal-title">系統總入口</h1>', unsafe_allow_html=True)
-    st.markdown(
-        '<div class="portal-subtitle">選擇要使用的系統。每個系統會在新分頁開啟，原有分享網址維持不變。</div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown("<div style='height:1.6rem'></div>", unsafe_allow_html=True)
 
     _render_app_grid(apps)
 
@@ -304,12 +261,6 @@ def render_portal() -> None:
         OFFICIAL_PROFILE_URL,
         icon=":material/apps:",
         width="stretch",
-    )
-    st.caption("新 App 會先出現在官方清單，入口卡片最晚於下一次自動同步後補上。")
-
-    st.markdown(
-        f'<div class="portal-footer">Shieldcoating Workspace · Portal V{PORTAL_VERSION}</div>',
-        unsafe_allow_html=True,
     )
 
 
