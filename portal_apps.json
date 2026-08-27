@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "apps": [
+    {
+      "id": "shieldcoating-documents",
+      "name": "SDS／TDS／COC 文件系統",
+      "eyebrow": "SHIELD COATING",
+      "description": "製作 SDS、TDS、COC、GHS 標籤與其他產品文件。",
+      "url": "https://shieldcoating-sds-v24.streamlit.app/",
+      "admin_url": "https://shieldcoating-sds-v24.streamlit.app/?admin=1",
+      "button": "進入文件系統",
+      "icon": "📄"
+    },
+    {
+      "id": "insta-process",
+      "name": "英仕達加工系統",
+      "eyebrow": "INSTA PROCESS",
+      "description": "管理案件、委外加工、完工回報、出貨與正式報告。",
+      "url": "https://insta-process-mobile.streamlit.app/",
+      "button": "進入加工系統",
+      "icon": "🏭"
+    }
+  ]
+}
