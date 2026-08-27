@@ -19,6 +19,15 @@
       "url": "https://insta-process-mobile.streamlit.app/",
       "button": "進入加工系統",
       "icon": "🏭"
+    },
+    {
+      "id": "resin-formula-calculator",
+      "name": "樹脂配方計算系統",
+      "eyebrow": "RESIN FORMULA",
+      "description": "批次貼上 2–6 個配方，完成原料對應、理論計算與版本化紀錄。",
+      "url": "https://wayne-resin-formula.streamlit.app/",
+      "button": "進入配方系統",
+      "icon": "🧪"
     }
   ]
 }

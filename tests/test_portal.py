@@ -32,14 +32,15 @@ class PortalAppTests(unittest.TestCase):
         cls.registry_module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cls.registry_module)
 
-    def test_portal_has_two_existing_streamlit_apps(self) -> None:
+    def test_portal_has_three_existing_streamlit_apps(self) -> None:
         apps = self.registry_module.load_portal_apps(REGISTRY_PATH)
-        self.assertEqual(len(apps), 2)
+        self.assertEqual(len(apps), 3)
         self.assertEqual(
             {app["url"] for app in apps},
             {
                 "https://shieldcoating-sds-v24.streamlit.app/",
                 "https://insta-process-mobile.streamlit.app/",
+                "https://wayne-resin-formula.streamlit.app/",
             },
         )
 
