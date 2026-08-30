@@ -25,6 +25,14 @@
       "url": "https://wayne-resin-formula.streamlit.app/",
       "button": "進入配方系統",
       "icon": "🧪"
+    },
+    {
+      "id": "dada-survivor-guide",
+      "name": "噠噠特攻終局攻略",
+      "eyebrow": "DADA SURVIVOR",
+      "url": "https://dada-survivor-guide.streamlit.app/",
+      "button": "進入攻略系統",
+      "icon": "⚡"
     }
   ]
 }
