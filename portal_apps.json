@@ -33,6 +33,14 @@
       "url": "https://dada-survivor-guide.streamlit.app/",
       "button": "進入攻略系統",
       "icon": "⚡"
+    },
+    {
+      "id": "coating-resin-workbench",
+      "name": "塗料與樹脂研發工作台",
+      "eyebrow": "COATING & RESIN R&D",
+      "url": "https://coating-resin-workbench.streamlit.app/",
+      "button": "進入研發工作台",
+      "icon": "⚗️"
     }
   ]
 }

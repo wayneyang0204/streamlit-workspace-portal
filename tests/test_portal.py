@@ -34,7 +34,7 @@ class PortalAppTests(unittest.TestCase):
 
     def test_portal_has_all_registered_streamlit_apps(self) -> None:
         apps = self.registry_module.load_portal_apps(REGISTRY_PATH)
-        self.assertEqual(len(apps), 4)
+        self.assertEqual(len(apps), 5)
         self.assertEqual(
             {app["url"] for app in apps},
             {
@@ -42,6 +42,7 @@ class PortalAppTests(unittest.TestCase):
                 "https://insta-process-mobile.streamlit.app/",
                 "https://wayne-resin-formula.streamlit.app/",
                 "https://dada-survivor-guide.streamlit.app/",
+                "https://coating-resin-workbench.streamlit.app/",
             },
         )
 
